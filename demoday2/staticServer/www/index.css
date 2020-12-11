@@ -1,0 +1,16 @@
+/* 
+css next差不多less 和 sass
+*/
+:root{
+    --bgcolor:#000,
+    --color:yellowgreen;
+}
+
+body{
+    /* 会用到局部变量(没有局部变量会用到全局) */
+    --bgcolor:#f00;
+    background-color: var(--bgcolor);
+}
+h1{
+    color:var(--color);
+}
