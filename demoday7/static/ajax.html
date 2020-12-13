@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+            Username:<input type="text" id='name'/>
+        </div>
+        <div>
+            Password:<input type="password" id='pass'/>
+        </div>
+    
+        <input type="button" value="register" id="register">
+        <input type="button" value="login" id='login'>
+    </form>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+        
+        $('#register').click(function(){
+            $.ajax({
+                method: 'POST',
+                url:'http://localhost:8080/register',
+                data:{name:$('#name').val(),pass:$('#pass').val()},
+                dataType:'json',
+                success(data){
+                    console.log(data);
+                },
+                error(err){
+                    console.log(err);
+                }
+            })
+        })
+        $('#login').click(function(){
+            $.ajax({
+                method:'GET',
+                url:'http://localhost:8080/login',
+                data:{name:$('#name').val(),pass:$('#pass').val()},
+                dataType:'json',
+                success(data) {
+                    if(data.code){
+                        console.log(data.msg);              
+                    }else{
+                        console.log(data.msg);
+                    }
+                },
+                error(err){
+                    console.log(err)
+                },
+            })
+        })
+    </script>
+</body>
+</html>
