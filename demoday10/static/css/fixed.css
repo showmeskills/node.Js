@@ -1,0 +1,282 @@
+@charset 'utf-8';
+/* 右侧侧边栏开始 */
+#rightSideBar{
+    position: fixed;
+    flex-direction: column;
+    right:0;
+    top:0;
+    width:35px;
+    height:100%;
+    background-color: #fff;
+    border-left:1px solid #e4e4e4;
+    z-index:100;
+}
+
+#rightSideBar .top{
+    position: absolute;
+    top:50%;
+    margin-top:-200px;
+    width:100%;
+    height:400px;
+    /* background-color: #089; */
+}
+#rightSideBar .bottom{
+    position: absolute;
+    bottom:40px;
+    width:100%;
+    /* background-color: #569; */
+}
+/* 右侧边栏上边的部分.top */
+#rightSideBar>ul>li{
+    position: relative;
+    font-size: 12px;
+}
+#rightSideBar>ul >li span{
+    background-image: url('../images/public/public-24.png');
+}
+#rightSideBar .top >li{
+    padding:32px 10px 10px 12px;
+}
+#rightSideBar>ul >li:hover{
+    background-color: #cf1c23;
+}
+#rightSideBar .top >li:hover{
+    color:#fff;
+}
+#rightSideBar .top >li >span{
+    position: absolute;
+    top:10px;
+    left:8px;
+    width:20px;
+    height:20px;
+}
+#rightSideBar .top >li:nth-child(1) >span{
+    background-position: 0 -162px;
+}
+#rightSideBar .top >li:nth-child(2) >span{
+    background-position: -39px -162px;
+}
+#rightSideBar .top >li:nth-child(3) >span{
+    background-position: -120px -162px;
+}
+#rightSideBar .top >li:nth-child(4) >span{
+    background-position: -44px -330px;
+}
+#rightSideBar .top >li:nth-child(1):hover >span{
+    background-position: -19px -162px;
+}
+#rightSideBar .top >li:nth-child(2):hover >span{
+    background-position: -59px -162px;
+}
+#rightSideBar .top >li:nth-child(3):hover >span{
+    background-position: -140px -162px;
+}
+#rightSideBar .top >li:nth-child(4):hover >span{
+    background-position: -64px -330px;
+}
+#rightSideBar>ul >li>div{
+    display:none;
+    position: absolute;
+    right:35px;
+    top:0;
+    background-color: #fff;
+    box-shadow: 0 0 5px #ddd;
+}
+#rightSideBar .top >li>div{
+    width:270px;
+}
+#rightSideBar>ul>li:hover >div{
+    display:block;
+}
+#rightSideBar .top >li:first-child>div div,#rightSideBar .top >li:nth-child(2)>div{
+    padding:12px 30px;
+    height:105px;
+    background-color: #fff;
+    border-bottom:1px solid #e5e5e5;
+}
+#rightSideBar .top >li:first-child>div div img,#rightSideBar .top >li:nth-child(2)>div img{
+    vertical-align: middle;
+    background: url('../images/public/sbbgg.jpg') center/cover;
+}
+#rightSideBar .top >li:first-child>div div p,#rightSideBar .top >li:nth-child(2)>div p{
+    display: inline-block;
+    color:#666;
+    vertical-align: middle;
+}
+#rightSideBar .top >li>div p>a:hover{
+    text-decoration: underline;
+}
+#rightSideBar .top >li:first-child>div ul{
+    overflow: hidden;
+    padding:0 15px;
+    background-color: #f9f9f9;
+}
+#rightSideBar .top >li:first-child>div ul li{
+    position: relative;
+    float: left;
+    width:120px;
+    height:95px;
+}
+#rightSideBar .top >li:first-child>div ul li span{
+    display: block;
+    margin:15px 45px;
+    width:30px;
+    height:30px;
+}
+#rightSideBar .top >li:first-child>div ul li:nth-child(1) span{
+    background-position: -60px -186px;
+}
+#rightSideBar .top >li:first-child>div ul li:nth-child(2) span{
+    background-position: -94px -186px;
+}
+#rightSideBar .top >li:first-child>div ul li:nth-child(3) span{
+    background-position: -154px -186px;
+}
+#rightSideBar .top >li:first-child>div ul li:nth-child(4) span{
+    background-position: -154px -218px;
+}
+#rightSideBar .top >li:first-child>div ul li p{
+    text-align: center;
+    color:#666;
+}
+#rightSideBar .top >li:first-child>div ul li:first-child{
+    border-bottom:1px dotted #e5e5e5;
+}
+#rightSideBar .top >li:first-child>div ul li:nth-child(2){
+    border-bottom:1px dotted #e5e5e5;
+}
+/* 右侧边栏底部部分 */
+#rightSideBar .bottom>li{
+    padding:10px;
+}
+#rightSideBar .bottom>li:hover{
+    background-color:#cf1c23;
+}
+#rightSideBar .bottom>li span{
+    display: block;
+    width:17px;
+    height:17px;
+}
+#rightSideBar .bottom>li:nth-child(1) span{
+    background-position: 0 -185px;
+}
+#rightSideBar .bottom>li:nth-child(2) span{
+    background-position: -21px -183px;
+}
+#rightSideBar .bottom>li:nth-child(3) span{
+    background-position: -41px -183px;
+}
+
+#rightSideBar .bottom>li:nth-child(1):hover span{
+    background-position: 0 -202px;
+}
+#rightSideBar .bottom>li:nth-child(2):hover span{
+    background-position: -21px -202px;
+}
+#rightSideBar .bottom>li:nth-child(3):hover span{
+    background-position: -41px -202px;
+}
+#rightSideBar .bottom>li div{
+    width:92px;
+    color:#666;
+    text-align: center;
+}
+#rightSideBar .bottom>li:nth-child(1) div{
+    line-height: 35px;
+}
+#rightSideBar .bottom>li:nth-child(2) div{
+    padding-top:6px;
+    height:92px;
+}
+/* 右侧侧边栏结束 */
+/* 左侧边栏开始 */
+#leftSideBar{
+    display: none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-left:-650px;
+    margin-top:-96px;
+    height:192px;
+    width:32px;
+    /* background-color: #f78; */
+    z-index: 100;
+}
+#leftSideBar li{
+    position: relative;
+    height:32px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    line-height:32px;
+    color:#fff;
+    font-size: 12px;
+}
+#leftSideBar li i{
+    position: absolute;
+    width:18px;
+    height:20px;
+    background-image: url('../images/public/newIndexIcon-24.png');
+    background-repeat: no-repeat;
+    margin:6px 7px;
+}
+#leftSideBar li:nth-child(1) i{
+    background-position: 3.5px -180px;
+}
+#leftSideBar li:nth-child(2) i{
+    background-position: -12px -180px;
+}
+#leftSideBar li:nth-child(3) i{
+    background-position: -31px -180px;
+}
+#leftSideBar li:nth-child(4) i{
+    background-position: -53px -180px;
+}
+#leftSideBar li:nth-child(5) i{
+    background-position: -38px -211px;
+}
+#leftSideBar li:nth-child(6) i{
+    background-position: -73px -185px;
+}
+#leftSideBar li:nth-child(6):hover i{
+    background-position: -93px -185px;
+}
+
+#leftSideBar li div{
+    display: none;
+    position: absolute;
+    width:100%;
+    height:100%;
+    text-align: center;
+    border-radius: 50%;
+}
+#leftSideBar li.on div{
+    display:block;
+}
+#leftSideBar li p{
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    left:0;
+    height: 100%;
+    width:32px;
+    background-color: #fa2;
+    text-align: center;
+    border-radius: 32px;
+    cursor: pointer;
+}
+#leftSideBar li:nth-child(1) p{
+    background-color: #d43d4e;
+}
+#leftSideBar li:nth-child(2) p{
+    background-color: #c2782f;
+}
+#leftSideBar li:nth-child(3) p{
+    background-color: #296693;
+}
+#leftSideBar li:nth-child(4) p{
+    background-color: #6c9d0e;
+}
+#leftSideBar li:nth-child(5) p{
+    background-color: #fe7a65;
+}
+/* 左侧边栏结束 */

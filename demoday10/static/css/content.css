@@ -1,0 +1,705 @@
+@charset 'utf-8';
+/* 疯狂抢购部分开始 */
+#crazySale{
+    overflow:hidden;
+    position: relative;
+    margin-top:10px;
+    height:500px;
+    /* background-color: rgb(29, 221, 205); */
+}
+#crazySale section.main{
+    position: absolute;
+    right:0;
+    left:0;
+    margin:0 auto;
+    width:1200px;
+    height: 100%;
+    background-color: #f9f9f9;
+    z-index: 1;
+}
+#crazySale section.main section{
+    float: left;
+}
+/* 疯狂抢购左右两边的背景 */
+#crazySale section.bgimg{
+    position: absolute;
+    top: 0;
+    width:1200px;
+    height:100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+#crazySale section.lbgimg{
+    left: -425px;
+    background-image: url('../images/content/bgleft.jpg');
+    background-position: left top;
+}
+#crazySale section.rbgimg{
+    right: -425px;
+    background-image: url('../images/content/bgright.jpg');
+    background-position: right top;
+}
+/* 商品展示部分 .sale 公告内容.info */
+#crazySale section.sale{
+    position: relative;
+    margin-right:10px;
+    width:917px;
+    height:100%;
+    border:1px solid #e4e4e4;
+}
+#crazySale section.info{
+    width:272px;
+    height:100%;
+}
+#crazySale section.info .topinfo{
+    position: relative;
+    height:154px;
+    border:1px solid #e4e4e4;
+}
+#crazySale section ul.title,#crazySale section ul.items{
+    width:100%;
+}
+#crazySale section.sale ul.items{
+    height:463px;
+}
+#crazySale section.info ul.items{
+    height: 115px;
+}
+#crazySale section ul.title{
+    overflow: hidden;
+}
+#crazySale section ul.title>li{
+    float:left;
+    height:35px;
+    background-color: #f9f9f9;
+    border-top:2px solid #e4e4e4;
+    border-bottom:1px solid #e4e4e4;
+    border-right:1px solid #e4e4e4;
+    line-height:32px;
+    font-size:16px;
+    text-align:center;
+    cursor: pointer;
+    /* background-color: #f09; */
+}
+#crazySale section.sale ul.title>li{
+    width:183px;
+}
+#crazySale section.info ul.title>li{
+    width:135px;
+}
+#crazySale section ul.title>li.last{
+    border-right:none;
+}
+#crazySale section ul.items{
+    position: relative;
+    background-color: #fff;
+}
+#crazySale section ul.items>li{
+    position: absolute;
+    display:none;
+}
+#crazySale section ul.items li.on{
+    display: block;
+}
+#crazySale section ul.items>li ul>li{
+    float:left;
+    padding:13px 11px;
+    font-size:12px;
+    line-height:20px;
+    text-align:left;
+}
+#crazySale section.sale ul.items>li ul>li{
+    width:183px;
+}
+#crazySale section.info ul.items>li ul>li{
+    overflow: hidden;
+    padding:6px 0 6px 15px;
+    width:130px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* 商品的图片展示区 */
+#crazySale section.sale ul.title div{
+    position: relative;
+    margin-bottom:5px;
+    width:160px;
+    height:160px;
+}
+#crazySale section.sale p{
+    color:#c01;
+}
+#crazySale section a{
+    color:#666;
+}
+#crazySale section.sale a:hover{
+    color:#c01;
+    text-decoration: underline;
+}
+#crazySale section.info a:hover{
+    color:#f90;
+    text-decoration: underline;
+}
+#crazySale section ul.title>li.on{
+    border-top-color:#c01;
+    border-bottom: none;
+    background-color: #fff;
+}
+/* 疯狂抢购的广告部分 */
+#crazySale section.info div.small{
+    overflow: hidden;
+    position: relative;
+    margin-top:16px;
+    width:272px;
+    height:157px;
+    border:1px solid #e4e4e4;
+}
+#crazySale section.info div ul.img{
+    position: absolute;
+    top:0;
+    left:0;
+    width:500%;
+    /* background-color: #f00; */
+    transition: 1s;
+}
+#crazySale section.info div ul.tra0{
+    transition: 0s;
+}
+#crazySale section.info div ul.img li{
+    float:left;
+}
+#crazySale section.info div ul.tab li.on{
+    background-color: #6d81ae;
+}
+#crazySale section.info div ul.tab{
+    position: absolute;
+    left:25px;
+    bottom:10px;
+    width:50px;
+    height:15px;
+
+}
+#crazySale section.info div ul.tab li{
+    float:left;
+    margin-right:5px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background-color: #ccc;
+}
+/* 疯狂抢购部分结束 */
+/* 横幅广告开始 */
+#streamer{
+    position: relative;
+    margin:20px 0 0;
+    height:126px;
+}
+#streamer ul{
+    overflow: hidden;
+    margin:0 auto;
+    width:1200px;
+    background-color: #fff;
+}
+#streamer ul li{
+    float:left;
+    position: relative;
+    margin-left:90px; 
+}
+/* 横幅广告结束 */
+/* 优惠部分开始 */
+#discount{
+    margin-top:30px;
+    height:295px;
+    /* background-color: #0f0;; */
+}
+#discount .content{
+    position: relative;
+    margin:auto;
+    width:1200px;
+    height:100%;
+    /* background-color: pink; */
+}
+#discount .content .title{
+    position: relative;
+    height:35px;
+    /* background-color: #d66969; */
+    line-height:35px;
+
+}
+#discount .content .title p.left span{
+    position: absolute;
+    left:0;
+    top:8px;
+    width:22px;
+    height:22px;
+    background-image: url('../images/public/newIndexIcon-24.png');
+    background-position: 0 0;
+    cursor: pointer;
+}
+#discount .content .title p{
+    text-indent: 2em;
+}
+#discount .content .title ul li{
+    float:left;
+    margin:13px 0 12px 15px;
+    width:10px;
+    height:10px;
+    background-color: #ccc;
+    cursor: pointer;
+} 
+#discount .content .title ul li.on{
+    background-color: #c00;
+}
+#discount .content .item{
+    position: relative;
+    padding-bottom:20px;
+    height:260px;
+    background-color: #fff;
+}
+#discount .content .item >li{
+    display: none;
+    position: absolute;
+    width:100%;
+    height:100%;
+}
+#discount .content .item >li.on{
+    display:block;
+}
+#discount .content .item >li ul li{
+    float:left;
+    padding:20px;
+    width:200px;
+    /* background-color: #00f; */
+}
+#discount .content .item >li ul li div{
+    position: relative;
+    width:160px;
+    height:160px;
+    margin:auto;
+}
+#discount .content .item >li ul li a{
+    overflow: hidden;
+    color:#666;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#discount .content .item >li ul li p{
+    color:#c01;
+    font-size: 14px;
+}
+/* 按钮部分 */
+#discount .content .btn div{
+    position: absolute;
+    top:50%;
+    transform: translateY(-5px);
+    width:27px;
+    height:60px;
+    background-image: url('../images/public/newIndexIcon-24.png');
+}
+#discount .content .btn .lbtn{
+    left:0;
+    background-position: 0 -26px;
+}
+#discount .content .btn .rbtn{
+    right:0;
+    background-position: -28px -26px;
+}
+/* 优惠部分结束 */
+/* 1F 白酒馆开始 */
+.floor{
+    overflow: hidden;
+}
+.floor .title{
+    height:35px;
+}
+.floor .title{
+    position: relative;
+    height:35px;
+    line-height:35px;
+
+}
+.floor .title p.left span{
+    float: left;
+}
+.floor .title p.left span.icon{
+    margin-right:10px;
+    width:35px;
+    height:35px;
+    background-image: url('../images/public/newIndexIcon-24.png');
+    background-position: 4px 37px;
+    line-height:35px;
+    text-align: center;
+    cursor: pointer;
+}
+.floor .title p.left{
+    float:left;
+}
+.floor .title p.right{
+    float:right;
+    font-size: 12px;
+    color:#666;
+}
+.floor .title p.right a{
+    padding:2px 5px;
+} 
+.floor .title p.right a:hover{
+    color:#c01;
+    text-decoration: underline;
+}
+.floor .title p.right a.on{
+    background-color: #d43d4e;
+    color:#fff;
+}
+.floor .content .banner,.floor .content ul.items{
+    float:left;
+}
+.floor .content .banner{
+    overflow: hidden;
+    position: relative;
+    width:210px;
+    height:485px;
+}
+#thirdFloor .content .banner .pic{
+    height:320px;
+}
+.floor .content .banner .pic{
+    position: absolute;
+    top:0;
+    width:1000%;
+    transition: 1s
+}
+.floor .content .banner .pic>li{
+    float: left;
+    position: relative;
+    width:210px;
+    height:100%;
+}
+.floor .content .banner .pic.tra0{
+    transition: 0s;
+}
+.floor .content .banner ul.tab{
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    height:12px;
+    transform: translate(-50%);
+}
+#thirdFloor .content .banner ul.tab{
+    bottom:175px;
+}
+#fifthFloor .content .banner ul.tab{
+    display:none;
+}
+.floor .content .banner ul.tab li{
+    float: left;
+    margin-right:8px;
+    width:12px;
+    height:12px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.floor .content .banner ul.tab li.on{
+    background-color: #f90;
+}
+.floor .content .items{
+    width:990px;
+    height:485px;
+    background-color: #fff;
+}
+.floor .content .items li{
+    float:left;
+    padding:20px;
+    width:195px;
+}
+.floor .content .items li div{
+    position: relative;
+    width:160px;
+    height:160px;
+    margin:auto;
+}
+.floor .content .items li a{
+    overflow: hidden;
+    color:#666;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.floor .content .items li p{
+    color:#c01;
+    font-size: 14px;
+}
+.floor .range{
+    height:165px;
+}
+/* 包括热门推荐和热门排行榜模块 */
+#thirdFloor .range{
+    position: absolute;
+    top:320px;
+    z-index:1;
+}
+/* 热门推荐 */
+.floor .range .hotBrand,.floor .range .hotrange{
+    float: left;
+}
+.floor .range .hotBrand{
+    width:210px;
+    height:100%;
+}
+.floor .range .hotBrand li{
+    padding:20px 10px;
+}
+.floor .range .hotBrand>li>p{
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+    color:#c01;
+}
+.floor .range .hotBrand>li>p span.dot{
+    float:left;
+    margin-top:8px;
+    margin-right: 10px;
+    width:5px;
+    height:5px;
+    line-height:10px;
+    background-color: #c01;
+}
+.floor .range .hotBrand>li>div{
+    padding:5px 0 0 15px ;
+    font-size: 12px;
+    color:#666;
+}
+.floor .range .hotBrand>li>div a{
+    float:left;
+    width:55px;
+}
+.floor .range .hotBrand>li>div a:hover{
+    color: #c01;
+    text-decoration: underline;
+}
+/* 热门排行榜 */
+.floor .range .hotrange{
+    width:990px;
+    height:100%;
+    background-color: #fff;
+}
+.floor .range .hotrange .title{
+    height:32px;
+    line-height:32px;
+}
+.floor .range .hotrange .title p.left{
+    font-size: 14px;
+    font-weight: bold;
+    color:#c01;
+} 
+.floor .range .hotrange .title p.left span.icon{
+    margin:8px 5px;
+    width:13px;
+    height:13px;
+    background-position: -37px 0;
+}
+.floor .range .hotrange .title p.right span{
+    padding-right:5px;
+    cursor: pointer;
+}
+.floor .range .hotrange .title p.right span.on{
+    color:#c01;
+    background-color: #fff;
+}
+.floor .range .hotrange>ul{
+    position: relative;
+    width:100%;
+    height:133px;
+}
+.floor .range .hotrange>ul>li{
+    display:none;
+    position: absolute;
+    width:100%;
+    height:100%;
+}
+.floor .range .hotrange>ul>li.on{
+    display:block;
+}
+.floor .range .hotrange>ul>li ul{
+    margin:15px 0;
+    width:100%;
+    height:113px;
+}
+.floor .range .hotrange>ul>li ul li{
+    float:left;
+    margin-left:20px;
+    padding-top:10px;
+    width:177px;
+    height:100px;
+}
+.floor .range .hotrange ul>li ul li div{
+    float:left;
+}
+.floor .range .hotrange ul>li ul li div.img{
+    position: relative;
+    width:90px;
+    height:90px;
+}
+.floor .range .hotrange ul>li ul li div.price{
+    width:80px;
+}
+.floor .range .hotrange ul>li ul li div.price a{
+    display:block;
+    height:36px;
+    font-size: 12px;
+    color:#666;
+}
+.floor .range .hotrange ul>li ul li div.price p{
+    color:#c01;
+}
+/* 1F 白酒馆结束 */
+/* 官方推荐开始 */
+#official{
+    height:335px;
+}
+#official .title{
+    height:35px;
+}
+#official .title>li{
+    position: relative;
+    float: left;
+    margin-right:10px;
+    padding:0 10px 10px;
+    border-bottom:2px solid transparent;
+    cursor: pointer;
+}
+#official .title>li::before{
+    display: none;
+    position: absolute;
+    content: '';
+    left:50%;
+    bottom:0;
+    border:5px solid transparent;
+    border-top:none;
+    border-bottom-color:#c01;
+    transform: translate(-5px);
+}
+#official .title>li.on{
+    border-bottom-color: #c01;
+}
+#official .title>li.on::before{
+    display:block;
+}
+#official .brand{
+    overflow: hidden;
+    position: relative;
+    height:300px;
+    background-color: #fff;
+}
+#official .brand>li{
+    display:none;
+    width:200%;
+    height:100%;
+}
+#official .brand>li.on{
+    display:block;
+}
+#official .brand>li.list{
+    transition: 1s;
+}
+#official .brand>li.list div.btn div{
+    position: absolute;
+    top:0;
+    bottom:0;
+    margin:auto 0;
+    width:46px;
+    height:46px;
+    background-image: url('../images/public/newIndexIcon-24.png');
+}
+#official .brand>li.list div.btn .lbtn{
+    left:5px;
+    background-position: 0 -130px;
+}
+#official .brand>li.list div.btn .rbtn{
+    right:5px;
+    background-position: -57px -130px;
+}
+#official .brand>li>ul{
+    float: left;
+    padding:18px 0 0 16px;
+    width:50%;
+    height:100%
+}
+#official .brand>li>ul li{
+    overflow: hidden;
+    float:left;
+    margin-right:17px;
+    margin-bottom: 12px;
+    width:180px;
+    height:80px;
+}
+#official .brand>li ul li div{
+    position: relative;
+    width:280px;
+    height:80px;
+}
+#official .brand>li ul li img{
+    transition: .5s;
+}
+#official .brand>li ul li:hover img{
+    transform: translate(-100px);
+}
+/* 官方推荐结束 */
+/* 品牌精品店开始 */
+#boutique{
+    height:165px;
+}
+#boutique .title{
+    position: relative;
+    height:30px;
+    cursor: pointer;
+}
+#boutique .title .left{
+    padding-left:10px;
+    padding-bottom:0;
+    border-left:8px solid #f90;
+    border-bottom: none;
+}
+#boutique .title .right{
+    position: absolute;
+    right:0;
+    top:13px;
+    height:0;
+    border:4px solid #c01;
+}
+#boutique .item{
+    width:100%;
+    height:135px;
+    background-color: #fff;
+}
+#boutique .item li{
+    float:left;
+    margin:5px 0 0 5px;
+    padding-left:127px;
+    padding-top:10px;
+    width:595px;
+    height:60px;
+    background-repeat: no-repeat;
+}
+#boutique .item li:nth-child(1){
+    background-image: url('../images/brand/1.jpg');
+}
+#boutique .item li:nth-child(2){
+    background-image: url('../images/brand/2.jpg');
+}
+#boutique .item li:nth-child(3){
+    background-image: url('../images/brand/3.jpg');
+}
+#boutique .item li:nth-child(4){
+    background-image: url('../images/brand/4.jpg');
+}
+#boutique .item li p{
+    font-size:12px;
+    line-height:20px;
+    color:#afafaf;
+}
+#boutique .item li a{
+    padding-right:10px;
+    padding-left:10px;
+    color:#666;
+}
+/* 品牌精品店结束 */

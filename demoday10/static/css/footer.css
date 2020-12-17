@@ -1,0 +1,171 @@
+/* 底部开始 */
+footer .top{
+    margin:20px auto 0;
+    height:290px;
+    background-color: #333;
+}
+footer .top>div,footer .bottom{
+    width:1200px;
+    margin:auto;
+}
+footer .top .link{
+    height:85px;
+    border-bottom:1px solid #494949;
+}
+footer .top .link .left{
+    position: relative;
+    float: left;
+}
+footer .top .link .left span{
+    float: left;
+}
+footer .top .link .left span:first-child{
+    margin-top:18px;
+    width:45px;
+    height:45px;
+    background-image: url('../images/public/public-24.png');
+    background-position: -142px -17px;
+    background-repeat: no-repeat;
+}
+footer .top .link .left span:nth-child(2){
+    padding:27px 20px;
+    color:#c00;
+    font-size:25px;
+    font-weight:bold;
+}
+footer .top .link .left span:nth-child(3){
+    padding-top:32px;
+    color:#fff;
+    font-size:14px;
+}
+footer .top .link .right{
+    position: relative;
+    float: right;
+    padding-top:30px;
+}
+footer .top .link .right span:first-child{
+    padding-right:10px;
+    color:#fff;
+    font-size: 12px;
+}
+footer .top .link .right input{
+    width:245px;
+    height:30px;
+    background-color: transparent;
+    border:1px solid #494949;
+    outline: none;
+    text-indent: 5px;
+    color:#fff;
+}
+footer .top .link .right span.icon{
+    position: absolute;
+    right:8px;
+    bottom:5px;
+    width:21px;
+    height:21px;
+    background-image: url('../images/public/public-24.png');
+    background-position: -133px 2px;
+}
+footer .top .explain{
+    overflow: hidden;
+    padding-top:40px;
+}
+footer .top .explain dl{
+    float: left;
+    padding-left:40px;
+    margin-right:65px;
+    width:100px;
+    line-height:30px;
+}
+footer .top .explain dl dd{
+    position: relative;
+    font-size:14px;
+    color:#fff;
+}
+footer .top .explain dl span{
+    position: absolute;
+    top:0px;
+    left:-40px;
+    width:28px;
+    height:28px;
+    background-image: url('../images/public/public-24.png');
+}
+footer .top .explain dl:nth-child(1) dd>span{
+    background-position: 0 -130px;
+}
+footer .top .explain dl:nth-child(2) dd>span{
+    background-position: -29px -130px;
+}
+footer .top .explain dl:nth-child(3) dd>span{
+    background-position: -59px -130px;
+}
+footer .top .explain dl:nth-child(4) dd>span{
+    background-position: -89px -130px;
+}
+footer .top .explain dl:nth-child(5) dd>span{
+    background-position: -119px -130px;
+}
+footer .top .explain dl:nth-child(6) dd>span{
+    background-position: -149px -130px;
+}
+footer .top .explain dl dt{
+    position: relative;
+    color:#ccc;
+    font-size:12px;
+}
+footer .top .explain dl dt a:hover{
+    text-decoration: underline;
+}
+footer .top .explain dl.last{
+    width:125px;
+}
+footer .top .explain dl.last dd span{
+    background-position: -140px -74px;
+}
+footer .top .explain dl.last dd{
+    font-size: 12px;
+}
+footer .top .explain dl.last dt{
+    margin-top:10px;
+    color:#fff;
+}
+footer .top .explain dl.last dt span{
+    background-position: -103px -74px;
+}
+footer .top .explain dl.last dt div{
+    display:none;
+}
+footer .top .explain dl.last dt.on div{
+    display:block;
+}
+
+/* 最底部   */
+footer .bottom .left{
+    float: left;
+    padding-top:30px;
+    width:800px;
+}
+footer .bottom .left{
+    font-size: 12px;
+    line-height:20px;
+}
+footer .bottom .left div a{
+    padding-right:5px;
+}
+footer .bottom .left div a:hover{
+    color:#c01;
+    text-decoration:underline;
+}
+footer .bottom .right{
+    float: left;
+    padding-top:40px;
+}
+footer .bottom .right div{
+    float: left;
+    margin-right:45px;
+    text-align: center;
+    font-size: 12px;
+    color:#666;
+    line-height: 20px;
+}
+/* 底部结束 */
