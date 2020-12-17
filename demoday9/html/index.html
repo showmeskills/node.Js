@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        es6
+            哪些元素会形成块作用域for if while(){} do() while(){} for in for of
+            swith(){}
+        es5
+            //函数块本身就是函数作用域/局部作用域
+            function fn(){}
+        */
+        // if (true){
+        //     //var a = 0;
+        //     //如果用let 来定义的话会形成块作用域
+        //     let a = 0;
+        // }
+        // console.log(a)
+    //     const obj = {
+    //     name: 'summy'
+    // }
+    // obj.name = 'aaa';
+    // console.log(obj)
+    // 代码平凡调用 就可以用到解构赋值
+    // const zhao = {
+    //     name:'赵本山',
+    //     age:'不详',
+    //     xiaopin:function(){
+    //         console.log('可以演');
+    //         return true;
+    //     }
+    // }
+    // // let {name,age,xiaopin} = zhao
+    // // console.log(name)
+    // // console.log(age)
+    // // console.log(xiaopin())
+    // let {xiaopin} = zhao
+    // xiaopin()
+    // xiaopin()
+    // xiaopin()
+    // xiaopin()
+
+    //es6 引入新的声明字符串的方法[``] 模板字符串
+    //内容中可以直接出现换行符
+    let str = `<ul>
+                <li></li>  
+                <li></li>        
+                <li></li>        
+                <li></li>        
+                <li></li>        
+                </ul>
+                `
+        console.log(str)
+    //变量拼接
+    let lovest = '123';
+    let out = `${lovest}8910`;
+    console.log(out)
+    </script>
+</body>
+</html>
