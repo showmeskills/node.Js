@@ -28,7 +28,7 @@ req.on('end',chunk=>{
         }else{
             res.end('{"code":1,"msg":"Passowrd or Username is worry"}')
         }
-    }else if(req.url === '/register'){
+    }else if(pathname === '/register'){
         res.writeHead(200,{'Content-Type': 'text/plai;charset=utf8'})
         let {name:post_name,pass:post_pass} = querystring.parse(data);
         if(!post_name){

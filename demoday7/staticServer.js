@@ -18,7 +18,7 @@ module.exports = (req,res,rootPath) => {
             
             res.writeHead(200,'ok!!',{'Content-Type':mimeType});
             res.write(data);
-            red.end();
+            res.end();
         }
     })
 }
