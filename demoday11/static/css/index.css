@@ -1,0 +1,13 @@
+
+:root{
+    --bgcolor:#000,
+    --color:yellowgreen;
+}
+
+body{
+    --bgcolor:#f00;
+    background-color: var(--bgcolor);
+}
+h1{
+    color:var(--color);
+}

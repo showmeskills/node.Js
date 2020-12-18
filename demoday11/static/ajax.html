@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+    
+</head>
+<body>
+   
+     <h1>Hello NodeJs</h1>
+     <form>
+        <div>
+            用户:<input type="text" id='name'/>
+        </div>
+        <div>
+            密码:<input type="password" id='pass'/>
+        </div>
+        <input type="button" value="注册" id="register">
+        <input type="button" value="登入" id='login'>
+    </form>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+        $('#register').click(function(){
+            $.ajax({
+                method:'POST',
+                url:'http://localhost:8080/register',
+                data:{name:$('#name').val(),pass:$('#pass').val()},
+                dataType:'json',
+                success(data) {
+                    console.log(data);              
+                },
+                error(err){
+                    console.log(err)
+                },
+            })
+        })
+        $('#login').click(function(){
+            $.ajax({
+                method:'GET',
+                url:'http://localhost:8080/login',
+                data:{name:$('#name').val(),pass:$('#pass').val()},
+                dataType:'json',
+                success(data) {
+                    if(data.code){
+                        console.log(data.msg);              
+                    }else{
+                        console.log(data.msg);
+                    }
+                },
+                error(err){
+                    console.log(err)
+                },
+            })
+        })
+    </script>
+</body>
+</html>
