@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Displaying the data from back end in the module of ejs</h1>
+    <h2><%=msg4%></h2>
+    <div><%-msg2%></div>
+    <div><%=msg3%></div>
+    <ul>
+        <%for(var i = 0; i < arr.length; i++){%>
+            <li><%=arr[i]%></li>
+        <%}%>
+    </ul>
+</body>
+</html>
