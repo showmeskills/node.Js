@@ -1,0 +1,14 @@
+{
+  "name": "demoday15",
+  "version": "1.0.0",
+  "description": "",
+  "main": "atrTemplate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2"
+  }
+}

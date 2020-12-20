@@ -1,0 +1,32 @@
+{
+    "001":{
+        "name":"Terry",
+        "age":"20",
+        "job":"php"
+    },
+    "002":{
+        "name":"Lisee",
+        "age":"22",
+        "job":"Java"
+    },
+    "003":{
+        "name":"Tiny",
+        "age":"23",
+        "job":"Web"
+    },
+    "004":{
+        "name":"Vuenchu",
+        "age":"30",
+        "job":"vue"
+    },
+    "005":{
+        "name":"Terrance",
+        "age":"20",
+        "job":"Web"
+    },
+    "006":{
+        "name":"Terry",
+        "age":"60",
+        "job":"React"
+    }
+}
