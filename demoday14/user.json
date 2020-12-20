@@ -1,0 +1,32 @@
+{
+    "001":{
+        "name":"Terry",
+        "age":20,
+        "job":"React"
+    },
+    "002":{
+        "name":"Terrance",
+        "age":20,
+        "job":"Vue"
+    },
+    "003":{
+        "name":"Erik",
+        "age":27,
+        "job":"NodeJs"
+    },
+    "004":{
+        "name":"Summy",
+        "age":29,
+        "job":"Java"
+    },
+    "005":{
+        "name":"Shit",
+        "age":44,
+        "job":"JavaScript"
+    },
+    "006":{
+        "name":"Angular",
+        "age":55,
+        "job":"React and Vue"
+    }
+}
