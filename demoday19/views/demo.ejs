@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%=msg%></h1>
+    <div class="arr"><%=arr%></div>
+    <ul>
+        <%for(let i = 0; i < arr.length; i++){%>
+            <li><%=arr[i]%></li>
+       <%}%>
+    </ul>
+    
+    <div id="show">
+
+    </div>
+
+    <a href="http://localhost:8080/login"><input type="submit" value="login" name="login"/></a>
+    <script type="text/javascript">
+        let arr = [...document.getElementsByClassName('arr')];
+        let show = document.getElementById('show');
+        arr.forEach((v,i)=>{
+           show.innerHTML = arr[i].innerHTML.split(',').reverse();
+        })
+    </script>
+  
+</body>
+</html>
