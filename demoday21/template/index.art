@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <ul>
+        {{each data}}
+        <li>{{$index}}---{{$value}}</li>
+        {{/each}}
+    </ul>
+    <h2 id="h2">{{str}}</h2>
+    <div id="div">
+    </div>
+
+    <script type="text/javascript">
+        let div = document.getElementById("div");
+        let h2 = document.getElementById("h2");
+
+        div.innerHTML = h2.innerHTML.split(' ').reverse()
+    </script>
+</body>
+</html>
