@@ -1,0 +1,1 @@
+alert('hello koa this is my first koa demo')
