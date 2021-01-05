@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%=title%>
+    <a href="http://www.terry.com:8000">back button</a>
+    <div>time:<span id="time"></span></div>
+    <script type="text/javascript">
+        let timer =null;
+        let time = document.getElementById('time');
+        let count = 60;
+        timer = setInterval(()=>{
+            time.innerHTML = `${count--}s`
+            if(count < 0){
+                clearInterval(timer)
+                time.innerHTML = `the cookie has been expired`
+            }
+        },1000)
+    </script>
+</body>
+</html>

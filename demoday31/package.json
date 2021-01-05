@@ -1,0 +1,19 @@
+{
+  "name": "demoday31",
+  "version": "1.0.0",
+  "description": "The demo introduces to set up cookies in main domain and sub-domain and displays how cookie works.",
+  "main": "cookie.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
