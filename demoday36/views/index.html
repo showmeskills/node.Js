@@ -1,0 +1,18 @@
+{{extend './layout.html'}}
+
+{{block 'title'}}Book{{/block}}
+
+{{block 'head'}}
+    <link rel="stylesheet" href="/less/index.css">
+{{/block}}
+
+{{block 'content'}}
+        <div id="app">
+            <h2>[[msg]]</h2>
+            <a class="btn btn-default" href="/admin">Admin</a>
+        </div>
+{{/block}}
+
+{{block 'scripts'}}
+    <script src="/scripts/index.js"></script>
+{{/block}}

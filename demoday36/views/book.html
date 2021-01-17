@@ -1,0 +1,45 @@
+{{extend './layout.html'}}
+
+{{block 'title'}}Book{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="/less/book.css">
+{{/block}}
+
+{{block 'content'}}
+<h1>library book</h1>
+<a class="btn btn-default" href="/addpage">add book</a>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>name</th>
+                <th>author</th>
+                <th>category</th>
+                <th>description</th>
+                <th>option</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{each data}}
+            <tr>
+                <td>{{$value.id}}</td>
+                <td>{{$value.name}}</td>
+                <td>{{$value.author}}</td>
+                <td>{{$value.category}}</td>
+                <td>{{$value.description}}</td>
+                <td>
+                    <a href="/editpage?editid={{$value.id}}">edit</a> |
+                    <a href="/delete?deleteid={{$value.id}}">delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+{{/block}}
+
+{{block 'scripts'}}
+    
+{{/block}}

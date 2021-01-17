@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  background-color: pink;
+  padding: 50px;
+}
+#app {
+  text-align: center;
+}
+.container {
+  width: 100%;
+  margin: 50px auto;
+}
+.container .input-group {
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+}
+.container .input-group #login,
+.container .input-group #back,
+.container .input-group #book {
+  margin-left: 10px;
+}

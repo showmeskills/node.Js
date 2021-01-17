@@ -1,0 +1,35 @@
+{{extend './layout.html'}}
+
+{{block 'title'}}Book{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="/less/admin.css">
+{{/block}}
+
+{{block 'content'}}
+<div id="app">
+    <h2>{{data}}</h2>
+</div>
+<div class="container">
+    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Username</span>
+        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" name="name" id="name">
+    </div>
+      
+    <div class="input-group">
+        <span class="input-group-addon">Password</span>
+        <input type="password" class="form-control" placeholder="Password" aria-label="Amount (to the nearest dollar)" name="pass" id='pass'>
+    </div>
+    <div class="input-group">
+        <input class="btn btn-default" id='reg' type="submit" value="register">
+        <input class="btn btn-default" id='login' type="submit" value="login">
+        <a class="btn btn-default" id='back' href="/">Home page</a>
+        <a class="btn btn-default" id='book' href="/book">bookDisplay</a>
+    </div>
+</div>
+
+{{/block}}
+
+{{block 'scripts'}}
+    <script src="/scripts/admin.js"></script>
+{{/block}}
