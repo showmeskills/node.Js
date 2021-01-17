@@ -1,0 +1,21 @@
+{
+  "name": "demoday36",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:dev": "cross-env NODE_ENV=development nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-simple-router": "^0.2.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.20",
+    "mysql": "^2.18.1"
+  }
+}
