@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>when the browsers do not support module loading</h1>
+    <div id="app">
+
+    </div>
+    <script nomodule src="https://cdn.bootcdn.net/ajax/libs/systemjs/6.7.1/system.min.js"></script>
+    <script nomodule>
+       let app = document.getElementById("app");
+        System.import('/ES6module_bundle.js').then(_=>{
+            console.log(_.default);
+            let Person = _.default;
+            let person = new Person();
+            person.fn();
+            app.innerHTML = Person;
+        })
+   </script>
+</body>
+</html>

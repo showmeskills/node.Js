@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>when the browser supports the modules</h1>
+    <div id="app">
+
+    </div>
+    <script type="module">
+        let app = document.getElementById("app");
+        import('/ES6module.js').then(_=>{
+            console.log(_.default);
+            let Person = _.default;
+            let person = new Person();
+            person.fn();
+            app.innerHTML = Person;
+        })
+    </script>
+</body>
+</html>
