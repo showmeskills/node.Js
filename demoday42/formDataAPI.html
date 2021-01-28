@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button id="btn">click</button>
+
+    <script>
+
+        btn.addEventListener("click",function(e){
+            let formData = new FormData();
+            formData.set('name','Terry');
+            formData.set('pass','123456');
+            let arr = [];
+            formData.forEach(function(value,key){
+                console.log(value);
+                console.log(key);
+                arr.push(`${key}=${value}`);
+            })
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', `http://localhost:8080?${arr.join("&")}`,true);
+          
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4 ){
+                    if(xhr.status >= 200 & xhr.status < 300 || xhr.status == 304){
+                        console.log(xhr.response)
+                        console.log(xhr)
+                    }else{
+                        console.log('error')
+                    }
+                }
+            }
+            e.preventDefault();
+        },false);
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="" id="form">
+        <div>
+            Username:<input type="text" name="user" id='inputUser'>
+        </div>
+        <div>
+            Password:<input type="password" name='pass' id='inputPass'>
+        </div>
+    
+        <input type="submit" value="submit" id="btn">
+    </form>
+
+    <script>
+        form.addEventListener("submit", function(e){
+            //这里的this 指向整个form表单
+            let formData = new FormData(this);
+            let xhr = new XMLHttpRequest();
+            
+
+            xhr.open('POST', 'http://localhost:8080',true);
+            //数据拼接 formData 低版本不支持兼容
+            xhr.send(formData);
+            
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4 ){
+                    if(xhr.status >= 200 & xhr.status < 300 || xhr.status == 304){
+                        console.log(xhr.response)
+                        console.log(xhr)
+                    }else{
+                        console.log('出错了')
+                    }
+                }
+            }
+            e.preventDefault();
+        },false)
+    </script>
+</body>
+</html>
