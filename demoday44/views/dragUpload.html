@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 500px;
+            height: 250px;
+            border: 2px solid black;
+            line-height: 250px;
+            text-align: center;
+        }
+
+        #wrapper {
+            width: 400px;
+            height: 20px;
+            margin: 50px;
+            border: 1px solid #000;
+        }
+
+        #progress {
+            width: 0;
+            height: 100%;
+            background-color: #0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        Do you have some files to upload?
+    </div>
+    <div id="wrapper">
+        <div id="progress">0%</div>
+    </div>
+    <script>
+        let box = document.getElementById("box");
+
+        box.addEventListener("dragenter", () => {
+            box.innerHTML = 'you have a new file to upload'
+        })
+        box.addEventListener("dragover", (e) => {
+            e.preventDefault()
+        })
+        box.addEventListener('dragleave', (e) => {
+            box.innerHTML = 'Are you ready to upload'
+        })
+        box.addEventListener('drop', (e) => {
+            ajax(e.dataTransfer.files)
+            box.innerHTML = 'your files are uploading'
+            e.preventDefault()
+        });
+
+        function ajax(files) {
+
+            let formData = new FormData();
+            if (files.length === 0) {
+                formData.set('_file', files);
+            } else {
+                Array.from(files).forEach(item => {
+                    formData.append('_files', item)
+                })
+            }
+            let xhr = new XMLHttpRequest();
+
+            xhr.upload.onprogress = function (e) {
+                var progress = document.getElementById('progress');
+                progress.style.width = e.loaded / e.total * 100 + '%';
+                progress.innerHTML = `${progress.style.width}`;
+            }
+            xhr.open("POST", 'http://localhost:8000/', true);
+            xhr.send(formData);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 & xhr.status < 300 || xhr.status === 304) {
+                        console.log(xhr.responseText);
+                    }
+                } else {
+                    console.log(`error`)
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
