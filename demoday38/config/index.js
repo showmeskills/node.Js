@@ -14,7 +14,7 @@ if(process.env.NODE_ENV == 'development'){
 
 if(process.env.NODE_ENV == 'production'){
     let prodPort ={
-        port:8000,
+        port:80,
     }
     _.assignIn(config,prodPort)
 }
