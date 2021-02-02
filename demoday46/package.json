@@ -1,0 +1,21 @@
+{
+  "name": "demoday46",
+  "version": "1.0.0",
+  "description": "",
+  "main": "koa-router.js",
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0"
+  },
+  "devDependencies": {
+    "art-template": "^4.13.2",
+    "koa-art-template": "^1.1.1",
+    "koa-static": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
