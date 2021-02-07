@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/less/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form style="margin:50px auto">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="name" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control col-lg-6" id="pass" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+        </form>
+        <button type="submit" id="btn" class="btn btn-danger">Submit</button>
+        <h1 id='h'></h1>
+        <h1 id='h1'></h1>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script src='/scripts/index.js'></script>
+    <script>
+        let name = document.getElementById('name');
+        let pass = document.getElementById('pass');
+        let btn = document.getElementById('btn');
+        let h = document.getElementById('h')
+        let h1 = document.getElementById('h1')
+        btn.addEventListener('click', function () {
+            axios({
+                baseURL: 'http://localhost:8088',
+                url: '/doLogin',
+                method: 'POST',
+                data: {
+                    username: name.value,
+                    pass: pass.value,
+                }
+            })
+                .then(_ => {
+                    h.innerHTML = _.data.username;
+                    h1.innerHTML = _.data.pass
+            })
+        })
+    </script>
+</body>
+
+</html>
