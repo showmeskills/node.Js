@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            background-color: pink;
+        }
+
+        .box {
+            width: 400px;
+            height: 200px;
+            border: 2px solid #000;
+            background-color: #eee;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        img {
+            width: 300px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <div id="fileList">
+        <ul>
+
+        </ul>
+    </div>
+    <button class="btn btn-danger">submit</button>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script type="text/javascript">
+        let box = document.getElementsByClassName('box')[0];
+        let btn = document.getElementsByClassName('btn')[0];
+        box.addEventListener('dragenter', function (e) {
+            box.innerText = 'testing the files, if you hand up to start uploading'
+        }, false)
+        box.addEventListener('dragover', function (e) {
+            e.preventDefault();
+        }, false)
+        box.addEventListener('dragleave', function (e) {
+            box.innerText = 'keeping to drag your files'
+        })
+        box.addEventListener('drop', function (e) {
+            Array.from(e.dataTransfer.files).forEach(item => {
+                let read = new FileReader();
+                read.onload = function (e) {
+                    let li = document.createElement('li');
+                    li.file = item;//自定义属性把item保存起来
+                    li.innerHTML = `
+                        <img src="" alt="">
+                        <a href="javascript:;">delete</a>
+                    `
+                    //img base 24
+                    li.children[0].src = this.result;
+                    li.children[1].onclick = function () {
+                        this.parentElement.remove();
+                    }
+                    let ul = document.getElementById('fileList')
+                    ul.append(li);
+                };
+                read.readAsDataURL(item);
+            });
+
+            btn.addEventListener('click', function () {
+                let li_data = document.getElementsByTagName('li');
+                let formData = new FormData();
+                Array.from(li_data).forEach(item => {
+                    formData.append('_files', item.file)
+                });
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST", 'http://localhost:8080/', true);
+                xhr.send(formData);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        //如果走的是缓存 304
+                        if (xhr.status >= 200 & xhr.status < 300 || xhr.status === 304) {
+                            console.log(xhr.responseText)
+                        }
+                    } else {
+                        console.log(`error`)
+                    }
+                }
+            })
+            e.preventDefault();
+            box.innerText = 'uploading....'
+        }, false)
+    </script>
+</body>
+
+</html>
