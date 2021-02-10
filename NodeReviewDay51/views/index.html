@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>我是首页的数据</h1>
+        <a href="/add" class="btn btn-danger btn-sm">add page</a>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <td>books_name</td>
+                <td>author</td>
+                <td>category</td>
+                <td>description</td>
+                <td>option</td>
+            </thead>
+            <tbody>
+                {{each result}}
+                <tr>
+                    <td>{{$value.name}}</td>
+                    <td>{{$value.author}}</td>
+                    <td>{{$value.category}}</td>
+                    <td>{{$value.desc}}</td>
+                    <td>
+                        <a href="/editPage?editid={{@$value._id}}"  class="btn btn-danger btn-sm">edit</a> |
+                        <a href="/delete?deleteid={{@$value._id}}" class="btn btn-danger btn-sm">delete</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+            </table>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div v-show='isShow' class="row" style="width: 500px; margin: 0 auto; border: 2px solid ghostwhite; padding: 15px;">
+            <form action="/doEdit" method="POST">
+                <p class="text-center text-danger">edit page</p>
+                {{each data}}
+                    <input type="hidden" name='id' value="{{@$value._id}}">
+                    <div class="form-group">
+                        <label for="sex">books_name</label>
+                        <input type="text" class="form-control" placeholder="enter Gender" name='name' value="{{$value.name}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">author</label>
+                        <input type="text" class="form-control" placeholder="enter author" name="author" value="{{$value.author}}">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">category</label>
+                        <input type="text" class="form-control" placeholder="enter category" name='category' value="{{$value.category}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">description</label>
+                        <input type="text" class="form-control" placeholder="enter description" name='desc' value="{{$value.desc}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-danger btn-sm" value="submit"/>
+                        <a href="/" class="btn btn-danger btn-sm">back</a>
+                    </div>
+                {{/each}}
+            </form>
+        </div>
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
