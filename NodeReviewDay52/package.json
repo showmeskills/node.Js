@@ -1,0 +1,27 @@
+{
+  "name": "NodeReviewDay52",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:dev": "cross-env NODE_ENV=development nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "cross-env": "^7.0.3",
+    "koa": "^2.13.1",
+    "koa-art-template": "^1.1.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.0.0",
+    "koa-session": "^6.1.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.20",
+    "md5": "^2.3.0",
+    "mongodb": "^2.2.36",
+    "svg-captcha": "^1.4.0"
+  }
+}
