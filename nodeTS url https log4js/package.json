@@ -1,0 +1,26 @@
+{
+  "name": "nodetsday01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/log4js": "^2.3.5",
+    "@types/node": "^15.12.2",
+    "log4js": "^6.3.0",
+    "nodemon": "^2.0.7",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@types/gulp": "^4.0.8",
+    "gulp": "^4.0.2"
+  }
+}
