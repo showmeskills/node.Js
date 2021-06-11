@@ -1,0 +1,16 @@
+[2021-06-11T14:58:07.768] [DEBUG] cheese - {}
+[2021-06-11T14:58:30.057] [DEBUG] cheese - {}
+[2021-06-11T14:58:40.127] [DEBUG] cheese - {}
+[2021-06-11T14:59:23.656] [DEBUG] cheese - [Object: null prototype] { name: 'tongyi', age: '18' }
+[2021-06-11T15:12:30.729] [DEBUG] cheese - [Object: null prototype] {
+  province: '上海',
+  city: '上海',
+  dustrict: '宝山区',
+  address: '统计质量199',
+  latitude: '43',
+  longitude: '160',
+  message: '求购一条小鱼',
+  contract: '12312312',
+  type: 'sell',
+  time: '1571217561'
+}
