@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script type="text/javascript">
+        function getData(data){
+            console.log(data);
+        }
+    
+    </script> -->
+    <!-- 通过前端请求的src 路径 jsonp 跨域 -->
+    <!-- <script src="http://localhost:8080/api/data?cb=getData"></script> -->
+    <script type="text/javascript">
+        fetch("http://localhost:8080/api/data")
+        .then(res=>res.json())
+        .then(res=>{
+            console.log(res);
+        })
+    </script>
+
+</body>
+</html>
