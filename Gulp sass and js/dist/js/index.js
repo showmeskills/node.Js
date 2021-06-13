@@ -1,0 +1,1 @@
+"use strict";for(var i=0;i<10;i++)console.log(i);function abc(){return"abc"}console.log("hello word");var abcd=function(){return"abcd"},abdce=100;
