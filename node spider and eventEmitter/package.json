@@ -1,0 +1,23 @@
+{
+  "name": "nodetsday05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^15.12.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.29",
+    "cheerio": "^1.0.0-rc.10",
+    "nodemon": "^2.0.7"
+  }
+}
