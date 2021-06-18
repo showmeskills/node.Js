@@ -1,0 +1,14 @@
+/*多行注释*/
+/*!强力注释*/
+@import "./var.scss";
+div{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    color:$c;
+    p{
+        height:100px;
+        width: 100px;
+        background-color: #fff;
+    }
+}

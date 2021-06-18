@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @-@include("./head.html")
+</head>
+<body>
+    <h1>home page</h1>
+    引入header.html
+    <!-- 导入html文件使用 -->
+    <!-- 语法:自定义标识符include("要导入的文件路径") -->
+    <!-- 文件路径:从basepath以后开始书写 -->
+    @-@include("./header.html",{title:"首页页面",show:""})
+    <hr>
+    <hr>
+
+    <div class="">nothing</div>
+    <input type="text" checked="checked">
+    <div>本页面内容</div>
+    <hr>
+    <hr>
+    引入footer.html
+    @-@include("./footer.html")
+    <script type="text/javascript">
+         let num = 200;
+    </script>
+</body>
+</html>
