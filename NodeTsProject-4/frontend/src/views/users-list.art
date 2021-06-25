@@ -1,0 +1,9 @@
+ {{each data}}
+ <tr>
+    <td>{{$index + 1}}.</td>
+    <td>{{$value.username}}</td>
+    <td>
+    <button class="btn btn-warning">delete</button>
+    </td>
+</tr>
+{{/each}}
