@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="/WsClient.js" charset="utf-8"></script> -->
+    <script src="./client-dist/socket.io.js" charset="utf-8"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content" name="name" style="width:400px;height:300px;border:1px solid red"></div>
+
+    <input type="text" id='msg' style="width:200px">
+    <button id="submit">提交</button>
+    <script src="/client-dist/socket.io.js"></script>
+    <script type="text/javascript">
+        // document.querySelector("#submit")
+        // .addEventListener("click",function(){
+        //     let msg2 = msg.value;
+        //     ws.send(msg2);
+        //     msg.value = "";
+        // },false);
+
+        const socket = io.connect("http://localhost:3000")
+        const content = document.getElementById("content");
+        document.querySelector("#submit")
+            .addEventListener("click",function(){
+                var msg2 = msg.value;
+                socket.emit("receive",msg2)
+                msg.value = ""
+                // content.innerHTML += msg2 +"</br>"
+            },false)
+        socket.on("message",function(msg){
+            content.innerHTML += msg +"<br/>"
+        })
+    </script>
+
+</body>
+
+</html>
