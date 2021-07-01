@@ -1,0 +1,19 @@
+ <div class="box">
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="box-header">
+                        <button class="btn btn-primary" id="add-position-btn" data-toggle="modal" data-target="#pos-model">添加</button>
+                    </div>
+                <table class="table table-bordered">
+                    <tr>
+                    <th style="width: 10px">#</th>
+                    <th>用户名</th>
+                    <th style="width:100px">操作</th>
+                    </tr>
+                   <tbody id="users-list"></tbody>
+                </table>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer clearfix" id="users-pages"></div>
+</div>
+          <!-- /.box -->
